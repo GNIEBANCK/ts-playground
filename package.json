@@ -1,0 +1,29 @@
+{
+  "name": "ts-playground",
+  "version": "1.0.0",
+  "description": "area practice coding in typescript",
+  "main": "./src/tester.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNIEBANCK/strengthSort.git"
+  },
+  "author": "Gregory Niebanck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GNIEBANCK/ts-playground/issues"
+  },
+  "homepage": "https://github.com/GNIEBANCK/ts-playground#readme",
+  "dependencies": {
+    "@types/node": "^10.11.3",
+    "commander": "^2.19.0",
+    "file-async": "^0.2.0",
+    "jshint": "^2.9.5",
+    "json2xls": "^0.1.2",
+    "readline-sync": "^1.4.9",
+    "ts-node": "^6.2.0",
+    "typescript": "^2.9.1"
+  }
+}
