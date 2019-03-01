@@ -21,10 +21,10 @@ export async function parseConsecutiveAndIslands(possibleValues:string[],queryVa
             currentChunk.push(sortedPossible[lastEvaluatedIndex]);
             lastEvaluatedIndex++;
         }    
-        results.push(currentChunk);
+        results.push([...new Set([currentChunk[0],currentChunk[currentChunk.length -1]])]);
         sortedQueryValues.splice(0,currentChunk.length);
         finished = (lastEvaluatedIndex >= (possibleValues.length - 1));
-        console.log(results);
+
     }
     return results;
 }
