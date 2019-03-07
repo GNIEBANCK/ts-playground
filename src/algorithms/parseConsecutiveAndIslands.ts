@@ -1,7 +1,7 @@
 // inspiration - sorting possible key values alphabetically in order to
 // create more efficient querying on range keys in dynamoDB
 // i.e multiple list values where rangekey === value is slower than a single where < value and > value
-// goal is to 
+// goal is to minimize total qeueries 
 
 export async function parseConsecutiveAndIslands(possibleValues:string[],queryValues:string[]):Promise<string[][]>
 {
@@ -24,7 +24,6 @@ export async function parseConsecutiveAndIslands(possibleValues:string[],queryVa
         results.push([...new Set([currentChunk[0],currentChunk[currentChunk.length -1]])]);
         sortedQueryValues.splice(0,currentChunk.length);
         finished = (lastEvaluatedIndex >= (possibleValues.length - 1));
-
     }
     return results;
 }
